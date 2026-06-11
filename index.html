@@ -205,8 +205,48 @@ display:block;
 width:max-content;
 margin-left:auto;
 }
+.hero-content{
+    position:relative;
+    z-index:3;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
 
+.hero h1{
+    margin:0;
+    font-family:'Playfair Display',serif;
+    font-size:70px;
+    color:var(--gold);
+    letter-spacing:5px;
+    text-shadow:0 0 20px rgba(212,175,55,.5);
+}
 
+.hero-subtitle{
+    margin-top:20px;
+    max-width:700px;
+    text-align:center;
+    font-size:18px;
+    color:#d4d8dd;
+    line-height:1.8;
+    letter-spacing:.5px;
+}
+
+#gold-price-box{
+position:fixed;
+top:20px;
+right:20px;
+z-index:9999;
+background:rgba(0,0,0,.85);
+color:#d4af37;
+padding:12px 18px;
+border-radius:15px;
+border:1px solid #d4af37;
+font-weight:bold;
+font-size:14px;
+box-shadow:0 0 20px rgba(212,175,55,.3);
+backdrop-filter:blur(10px);
+}
 </style>
 </head>
 
@@ -216,14 +256,23 @@ margin-left:auto;
 <div class="cursor"></div>
 
 <button class="theme-btn" id="themeToggle">Light Theme</button>
-
+<div id="gold-price-box">
+🟡 طلای ۱۸ عیار
+<br>
+18,000,000 تومان
+</div>
 <section class="hero">
 
 <video id="heroVideo" autoplay muted playsinline></video>
 
 <div class="overlay"></div>
 
-<h1>Sam Gold</h1>
+<div class="hero-content">
+    <h1>Sam Gold</h1>
+    <p class="hero-subtitle">
+        بازار تهران، سبزه میدان، پاساژ طلا و جواهر ایران، پلاک 65
+    </p>
+</div>
 
 </section>
 
